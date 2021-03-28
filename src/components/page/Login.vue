@@ -1,27 +1,31 @@
 <template>
     <div class="login-wrap">
+        <div class="ms-title">安定人口档案数据统计</div>
         <div class="ms-login">
-            <div class="ms-title">VUE 后台管理系统架构</div>
             <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
                 <el-form-item prop="username">
-                    <el-input v-model="param.username" placeholder="username">
-                        <el-button slot="prepend" icon="el-icon-lx-people"></el-button>
+                    <el-input v-model="param.username" placeholder="请输入用户名" class="ms-input">
+                        <el-button slot="prepend" icon="el-icon-lx-people" class="ms-input-btn"></el-button>
                     </el-input>
                 </el-form-item>
                 <el-form-item prop="password">
                     <el-input
                         type="password"
-                        placeholder="password"
+                        class="ms-input"
+                        placeholder="请输入密码"
                         v-model="param.password"
                         @keyup.enter.native="submitForm()"
                     >
-                        <el-button slot="prepend" icon="el-icon-lx-lock"></el-button>
+                        <el-button slot="prepend" icon="el-icon-lx-lock" class="ms-input-btn"></el-button>
                     </el-input>
                 </el-form-item>
+                <div class="check-bg">
+                    <el-checkbox label="显示密码" v-model="show_password"></el-checkbox>
+                    <el-checkbox label="记住密码"></el-checkbox>
+                </div>
                 <div class="login-btn">
                     <el-button type="primary" @click="submitForm()">登录</el-button>
                 </div>
-                <p class="login-tips">Tips : 用户名和密码admin/123456。</p>
             </el-form>
         </div>
     </div>
@@ -40,6 +44,7 @@ export default {
                 username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
                 password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
             },
+            show_password: false
         };
     },
     methods: {
@@ -70,37 +75,58 @@ export default {
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url(../../assets/img/login-bg.jpg);
+    background-image: url(../../assets/img/login_bg.png);
     background-size: 100%;
 }
 .ms-title {
     width: 100%;
-    line-height: 50px;
+    line-height: 75px;
+    position: absolute;
+    top: 95px;
     text-align: center;
-    font-size: 20px;
+    font-size: 36px;
     color: #fff;
-    border-bottom: 1px solid #ddd;
 }
 .ms-login {
     position: absolute;
+    top: 180px;
     left: 50%;
-    top: 50%;
-    width: 350px;
-    margin: -190px 0 0 -175px;
+    width: 363px;
+    height: 243px;
+    margin-left: -181px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
     overflow: hidden;
+    background-image: url(../../assets/img/login_box.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 .ms-content {
     padding: 30px 30px;
 }
+.ms-input-btn {
+    color: #24D6E6 !important;
+    font-size: 20px;
+}
+.ms-input {
+    border:#24D6E6 1px;
+}
+.check-bg {
+    display: flex;
+    justify-content: space-between;
+}
+.check-bg >>> .el-checkbox__label {
+    color: #CCCCCC;
+    font-size: 11px;
+}
 .login-btn {
     text-align: center;
+    margin-top: 28px;
 }
 .login-btn button {
     width: 100%;
     height: 36px;
     margin-bottom: 10px;
+    background: #0384EA;
 }
 .login-tips {
     font-size: 12px;

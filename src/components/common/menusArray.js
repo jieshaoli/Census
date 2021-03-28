@@ -2,6 +2,36 @@ import  config from '../../utils/config.js';
 let menuList = [];
 const menus = [
     {
+        img: "../../assets/img/left/left_console.png",
+        title: '控制台',
+        index: 'console',
+        code: 'console',
+    },
+    {
+        img: "../../assets/img/left/left_house_data.png",
+        title: '镇数据',
+        index: 'townData',
+        code: 'townData',
+    },
+    {
+        img: "../../assets/img/left/left_house_data.png",
+        title: '村数据',
+        index: 'villageData',
+        code: 'villageData',
+    },
+    {
+        img: "../../assets/img/left/left_data_analysis.png",
+        title: '数据分析',
+        index: 'dataAnalysis',
+        code: 'dataAnalysis',
+    },
+    {
+        img: "../../assets/img/left/left_system.png",
+        title: '系统',
+        index: 'system',
+        code: 'system',
+    },
+    {
         icon: 'el-icon-s-tools',
         index: '9',
         title: '基础信息管理',
@@ -72,7 +102,7 @@ const menus = [
     },
     {
         icon: 'el-icon-lx-calendar',
-        index: '3',
+        index: '5',
         title: '表单相关',
         subs: [
             {
@@ -84,7 +114,7 @@ const menus = [
                 title: '自定义表单'
             },
             {
-                index: '3-2',
+                index: '5-2',
                 title: '三级菜单',
                 subs: [
                     {

@@ -1,8 +1,8 @@
 {
-  "name": "vue-demo-brick",
+  "name": "census",
   "version": "0.0.1",
   "private": true,
-  "author": "ludan",
+  "author": "lsj",
   "scripts": {
     "dev": "npm run serve",
     "serve": "vue-cli-service serve",

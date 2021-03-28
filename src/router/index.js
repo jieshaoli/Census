@@ -16,6 +16,36 @@ export default new Router({
             meta: { title: '自述文件' },
             children: [
                 {
+                    path: '/map',
+                    component: () => import('../components/page/mapPage/index.vue'),
+                    meta: { title: '地图' }
+                },
+                {
+                    path: '/console',
+                    component: () => import('../components/page/consolePage/index.vue'),
+                    meta: { title: '控制台' }
+                },
+                {
+                    path: '/townData',
+                    component: () => import('../components/page/townDataPage/index.vue'),
+                    meta: { title: '镇数据' }
+                },
+                {
+                    path: '/villageData',
+                    component: () => import('../components/page/villageDataPage/index.vue'),
+                    meta: { title: '村数据' }
+                },
+                {
+                    path: '/dataAnalysis',
+                    component: () => import('../components/page/dataAnalysisPage/index.vue'),
+                    meta: { title: '数据分析' }
+                },
+                {
+                    path: '/system',
+                    component: () => import('../components/page/systemPage/index.vue'),
+                    meta: { title: '系统' }
+                },
+                {
                     path: '/dashboard',
                     component: () => import('../components/page/Dashboard.vue'),
                     meta: { title: '系统首页' }
@@ -110,42 +140,42 @@ export default new Router({
                 },
                 {
                     path: '/management',
-                    meta: {title: '业务界面1'},
+                    meta: { title: '业务界面1' },
                     component: () => import('../components/page/pagesComponent/index.vue')
                 },
                 {
                     path: '/storeManagement',
-                    meta: {title: '商铺管理'},
+                    meta: { title: '商铺管理' },
                     component: () => import('../components/page/storeManagement/index.vue')
                 },
                 {
                     path: '/instrumentManagement',
-                    meta: {title: '仪器管理'},
+                    meta: { title: '仪器管理' },
                     component: () => import('../components/page/instrumentManagement/index.vue')
                 },
                 {
                     path: '/userData',
-                    meta: {title: '用户信息'},
+                    meta: { title: '用户信息' },
                     component: () => import('../components/page/userData/model.vue')
                 },
                 {
                     path: '/customerInquiry',
-                    meta: {title: '客户自定义查询'},
+                    meta: { title: '客户自定义查询' },
                     component: () => import('../components/page/customerInquiry/index.vue')
                 },
                 {
                     path: '/editor',
-                    meta: {title: '客户自定义查询'},
+                    meta: { title: '客户自定义查询' },
                     component: () => import('../components/page/editorBox/index.vue')
                 },
                 {
                     path: '/specialOptions',
-                    mate: {title: 'Vue 特殊用法'},
+                    mate: { title: 'Vue 特殊用法' },
                     component: () => import('../components/page/specialOptions/index.vue')
                 },
                 {
                     path: '/vueCssTransition',
-                    mate: {title: 'Vue 动画操作'},
+                    mate: { title: 'Vue 动画操作' },
                     component: () => import('../components/page/vueCssTransition/index.vue')
                 }
             ]
